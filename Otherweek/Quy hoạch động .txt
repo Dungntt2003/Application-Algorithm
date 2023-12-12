@@ -1,0 +1,29 @@
+
+// Mô hình chung của quy hoạch động
+
+
+map <problem , value > Memmory ;
+
+value DP (problem P){
+    if (is_base_case(P))
+    return base_case_value(P);
+
+    if (Memmory.find(P) != Memmory.end())
+    return Memmory[P];
+    
+    value res = some value;
+    for (problem Q in subproblem P){
+        res = Combine(result, DP(Q));
+    }
+    reurn Memmory[P] = res;
+}
+
+
+
+// Ham tinh thoi gian chay chuong trinh
+auto start = chrono::high_resolution_clock::now();
+.... 
+auto end = chrono::high_resolution_clock::now();
+    chrono::duration<double> duration = end - start;
+    double time = duration.count();
+    cout << "Thoi gian thuc hien " << time << endl;
