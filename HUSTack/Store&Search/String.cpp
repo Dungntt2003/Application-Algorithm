@@ -3,23 +3,7 @@ using namespace std;
 string str;
 string key;
 string value;
-vector<string> word;
-
-int checkFind(string value){
-    sort(word.begin(), word.end());
-    auto it = lower_bound(word.begin(), word.end(), value);
-    if (it != word.end() && *it == value)
-    return 1;
-    return 0;
-}
-
-int checkInsert(string value){
-    if (checkFind(value) == 0){
-        word.push_back(value);
-        return 1;
-    }
-    return 0;
-}
+unordered_set <string> Word;
 
 int main(){
     ios_base::sync_with_stdio(0);
@@ -28,7 +12,7 @@ int main(){
     do {
         getline(cin , str);
         if (str != "*")
-        word.push_back(str);
+        Word.insert(str);
     }
     while (str != "*");
 
@@ -38,10 +22,14 @@ int main(){
             stringstream ss(str);
             ss >> key >> value;
             if (key == "find"){
-                cout << checkFind(value) << endl;
+                if (Word.find(value) != Word.end())
+                cout << 1  << endl;
+                else cout << 0 << endl;
             }
             if (key == "insert"){
-                cout << checkInsert(value) << endl;
+                auto check = Word.insert(value);
+                if (check.second) cout << 1 << endl;
+                else cout << 0 << endl;
             }
         }
     }
