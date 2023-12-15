@@ -1,0 +1,59 @@
+************* Đặc điểm của set :
+Thứ tự lưu trữ - Tập hợp lưu trữ các phần tử theo thứ tự được sắp xếp.
+
+Đặc điểm giá trị – Tất cả các phần tử trong một tập hợp có các giá trị duy nhất.
+
+Bản chất giá trị – Giá trị của phần tử không thể được sửa đổi sau khi nó được thêm vào tập hợp, mặc dù có thể xóa và sau đó thêm giá trị đã sửa đổi của phần tử đó. Vì vậy, các giá trị là bất biến.
+
+Kỹ thuật tìm kiếm - Các bộ tuân theo việc triển khai cây tìm kiếm nhị phân.
+
+Sắp xếp thứ tự – Các giá trị trong một tập hợp không được lập chỉ mục
+
+************* So sánh set và unordered set
+SET
+
+
+Set lưu trữ các phần tử theo thứ tự được sắp xếp 
+
+Đặt các cửa hàng/chỉ thu được các phần tử duy nhất 
+
+Bộ sử dụng Cây tìm kiếm nhị phân để triển khai Bộ không có thứ tự sử dụng Bảng băm để triển khai
+
+Có thể xóa nhiều phần tử bằng cách đưa ra trình vòng lặp bắt đầu và kết thúc. Chúng ta có thể xóa phần tử đó mà vị trí của trình vòng lặp được đưa ra
+
+
+Unordered SET
+
+Unordered Set lưu trữ các phần tử theo thứ tự chưa được sắp xếp
+
+Bộ không có thứ tự lưu trữ/chỉ thu được các giá trị duy nhất
+
+Bộ không có thứ tự sử dụng Bảng băm để triển khai
+
+************** Sử dụng khi nào 
+std::set
+Sử dụng std::set khi cần duy trì thứ tự tăng dần của các phần tử.
+Có thể tìm kiếm, chèn và xóa phần tử trong độ phức tạp trung bình là O(log n) với n là số lượng phần tử.
+Cung cấp iterators hỗ trợ duyệt qua các phần tử theo thứ tự tăng dần.
+std::unordered_set
+Sử dụng std::unordered_set khi cần tối ưu cho việc tìm kiếm, chèn và xóa phần tử nhanh chóng, thường trong thời gian trung bình gần O(1).
+Không duy trì thứ tự của các phần tử. Việc duyệt qua các phần tử không đảm bảo theo thứ tự nhất định.
+Sử dụng băm để lưu trữ và truy xuất dữ liệu, điều này dẫn đến việc truy cập nhanh hơn trong trường hợp lớn số lượng phần tử.
+
+
+*********** Các hàm cần thiết hay sử dụng
+size(): Trả về số lượng phần tử trong set.
+clear(): Xóa toàn bộ nội dung của set.
+lower_bound() và upper_bound(): Tìm giới hạn dưới và giới hạn trên của một giá trị.
+bucket_count(): Trả về số lượng bucket trong unordered_set.
+count()
+std::set: count() trong std::set trả về số lần một phần tử xuất hiện trong set (1 hoặc 0, vì set chỉ chứa phần tử duy nhất).
+
+std::unordered_set: Trong std::unordered_set, count() trả về số lượng phần tử với giá trị cụ thể, tức là 1 hoặc 0 vì std::unordered_set cũng chỉ chứa phần tử duy nhất.
+
+empty()
+std::set và std::unordered_set: Phương thức empty() trả về true nếu set rỗng và false nếu không.
+equal_range()
+std::set và std::unordered_set: equal_range() trả về một cặp iterators định ra phạm vi các phần tử với giá trị tương đương với một giá trị đã cho. Nó trả về cặp iterators pair<iterator, iterator>, trong đó first là iterator đến phần tử đầu tiên và second là iterator đến phần tử kết thúc của phạm vi.
+reserve()
+std::unordered_set: reserve() trong std::unordered_set cố gắng cấp phát không gian đủ để chứa số lượng phần tử đã cho mà không cần tái cấu trúc bảng băm (rehashing). Việc này có thể cải thiện hiệu suất khi bạn biết trước số lượng phần tử sẽ thêm vào.
