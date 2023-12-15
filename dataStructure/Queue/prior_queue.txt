@@ -1,0 +1,1 @@
+Hàng đợi ưu tiên C++ là một loại bộ điều hợp vùng chứa, được thiết kế đặc biệt sao cho phần tử đầu tiên của hàng đợi là phần tử lớn nhất hoặc nhỏ nhất trong tất cả các phần tử trong hàng đợi và các phần tử theo thứ tự không tăng hoặc không giảm (do đó chúng tôi có thể thấy rằng mỗi phần tử của hàng đợi có mức độ ưu tiên {thứ tự cố định})

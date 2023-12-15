@@ -1,0 +1,15 @@
+Khi cần một danh sách động của các phần tử: std::vector cung cấp khả năng thêm, xóa và truy cập phần tử một cách hiệu quả.
+
+Khi cần thực hiện nhanh các phép thao tác duyệt dữ liệu theo index: std::vector cho phép truy cập ngẫu nhiên đến các phần tử của nó thông qua index.
+
+Khi cần quản lý một mảng động: Khi kích thước của dữ liệu không rõ trước, std::vector cho phép mở rộng và thu hẹp kích thước linh hoạt.
+
+Phương Thức Quan Trọng của Vector:
+push_back(): Thêm một phần tử vào cuối vector.
+pop_back(): Loại bỏ phần tử cuối cùng của vector.
+size(): Trả về số lượng phần tử hiện tại trong vector.
+empty(): Kiểm tra xem vector có trống không.
+clear(): Xóa toàn bộ nội dung của vector.
+resize(): Thay đổi kích thước của vector.
+at(): Truy cập phần tử tại một vị trí cụ thể trong vector.
+begin() và end(): Iterator đến phần tử đầu và phần tử kết thúc của vector để duyệt qua các phần tử.
