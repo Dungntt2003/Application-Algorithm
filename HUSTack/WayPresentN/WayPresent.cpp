@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
-#define MAX 51
 using namespace std;
 
+const int MAX = 1e4 + 5;
 int A[MAX];
 int f;
 int n;
@@ -9,17 +9,9 @@ int m0;
 int m;
 int res = 0;
 
-// void Print(){
-//     for (int i = 1 ; i <= n ; i++){
-//         cout << A[i] << " ";
-//     }
-//     cout << endl;
-// }
-
 void Try(int k){
     if ( k == n && (m-f) >= A[k-1]){
         A[k] = m - f;
-        // Print();
         res++;
         return;
     }

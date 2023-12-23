@@ -86,15 +86,14 @@ void pourWater(int aCapacity, int bCapacity, int target) {
         }
     }
 
-    std::cout << "Không thể đạt được " << target << " lít nước." << std::endl;
+    std::cout << -1 << std::endl;
 }
 
 int main() {
-    int aCapacity = 5;
-    int bCapacity = 3;
-    int target = 4;
+    int a,b,c;
+    std::cin >> a >> b >> c;
 
-    pourWater(aCapacity, bCapacity, target);
+    pourWater(a,b,c);
 
     return 0;
 }
