@@ -18,3 +18,5 @@ B3 : Chạy trên máy (nếu không chạy được thì tự fix nhé, hoặc 
 
 ***** Lưu ý chút : Những code này đều là tham khảo, đừng dùng để gian lận hay gì nhé, code nó tự bứt rứt nó không chạy đâu
 Hết.
+
+P/s : Đã qua môn rồi nhé hehe
